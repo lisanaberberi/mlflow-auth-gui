@@ -7,7 +7,7 @@
             "request": "launch",
             "module": "mlflow",
             "env": { "FLASK_DEBUG": "1" },
-            "args": [ "server", "--app-name=oidc-auth", "--dev" ],
+            "args": [ "server", "--app-name=basic-auth", "--dev" ],
             "jinja": true,
             "justMyCode": true
         },
