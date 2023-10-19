@@ -2,7 +2,7 @@
 # Stage to run the app in development
 FROM ghcr.io/mlflow/mlflow:latest AS development
 EXPOSE 5678
-RUN python3 -m pip install --upgrade pip debugpy
+RUN python3 -m pip install --upgrade pip
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
 # Turns off buffering for easier container logging
@@ -13,8 +13,8 @@ RUN pip install psycopg2-binary
 COPY plugins plugins
 # Install the plugins
 RUN pip install --editable plugins/mlflow-oidc
-# Set the entrypoint to debugpy
-ENTRYPOINT ["python", "-Xfrozen_modules=off", "-m", "debugpy", "--listen", "0.0.0.0:5678", "--wait-for-client", "-m", "mlflow" ]
+# Set the entrypoint
+ENTRYPOINT ["python", "-m", "mlflow" ]
 
 # ======================================================================
 # Stage to build the plugins packages
