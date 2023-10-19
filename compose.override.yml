@@ -13,7 +13,7 @@ services:
       - --artifacts-destination=/mlruns
       - --host=0.0.0.0
       - --port=5000
-      # - --workers=<workers>
+      - --workers=1
       # - --static-prefix=<static_prefix>
       # - --gunicorn-opts=<gunicorn_opts>
       # - --waitress-opts=<waitress_opts>
