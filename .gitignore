@@ -1,3 +1,5 @@
 .env
 oidc_auth.db
+basic_auth.db
 mlartifacts
+mlruns
