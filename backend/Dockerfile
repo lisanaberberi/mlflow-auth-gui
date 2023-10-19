@@ -14,7 +14,7 @@ COPY plugins plugins
 # Install the plugins
 RUN pip install --editable plugins/mlflow-oidc
 # Set the entrypoint to debugpy
-ENTRYPOINT ["python", "-Xfrozen_modules=off", "-m", "debugpy", "--listen", "0.0.0.0:5678", "--wait-for-client", "-m", "mlflow" ]
+ENTRYPOINT ["python", "-m", "mlflow" ]
 
 # ======================================================================
 # Stage to build the plugins packages
