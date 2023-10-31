@@ -24,4 +24,3 @@ tar -czf "$BACKUP_DIR/backup-sqlite-$TIMESTAMP.tar.gz" "$BACKUP_FILE"
 
 # Remove the original SQL backup (optional, to save space)
 rm "$BACKUP_FILE"
-
